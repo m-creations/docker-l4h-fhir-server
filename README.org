@@ -1,0 +1,22 @@
+** LinuxforHealth/fhir-server with additional resources
+This Docker image is based on the ~ghcr.io/linuxforhealth/fhir-server:5.1.1~ image with additional configurations and resources.
+
+*** Features
+
+- Utilizes the ~fhir-server-config.json~ file to set the ~externalBaseUrl~.
+- The ~datasources.xml~ file using environment variables to configure PostgreSQL database connection settings.
+- Includes a ~jvm.options~ file to enable ~TLSv1.3~ for secure communication.
+- Add two jar files to the userlib folder, one containing FHIR profiles and the other containing HL7's SDC package.
+
+
+*** Environment Variables
+
+These environment variables can be customized when running a container based on this image.
+- ~EXTERNAL_BASE_URL~
+- ~FHIR_DB_HOSTNAME~
+- ~FHIR_DB_PORT~
+- ~FHIR_DB_NAME~
+- ~FHIR_DB_USER~
+- ~ENV FHIR_DB_PASSWORD~
+
+For more information about configuring and using the Linux For Health's FHIR Server, please refer to their documentation at https://github.com/LinuxForHealth/FHIR
