@@ -1,0 +1,9 @@
+<server>
+    <webApplication id="fhir-server-webapp">
+        <application-bnd id="bind">
+            <security-role id="users" name="FHIRUsers">
+                <special-subject type="EVERYONE"/>
+            </security-role>
+        </application-bnd>
+    </webApplication>
+</server>
